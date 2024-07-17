@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  Product-service-dockering:
+    build:
+      context: src/main/java
+      dockerfile: Dockerfile
+    container_name: Product-service-dockering
+    ports:
+      - "8011:8005"
+    environment:
+      SPRING_APPLICATION_NAME: Product-service-dockering
+      SERVER_PORT: 8005

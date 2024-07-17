@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  order-service-dockering:
+    build:
+      context: ../java
+      dockerfile: Dockerfile
+    container_name: order-service-dockering
+    ports:
+      - "8011:8005"
+    environment:
+      SPRING_APPLICATION_NAME: order-service-dockering
+      SERVER_PORT: 8005
